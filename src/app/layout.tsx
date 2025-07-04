@@ -7,8 +7,8 @@ import { Footer } from '@/components/footer';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'FolioForge | Your Professional Portfolio',
-  description: 'A modern portfolio to showcase your projects and skills.',
+  title: 'Abhiram P S | Software Engineer',
+  description: 'Portfolio of Abhiram P S, a software engineer specializing in full-stack development with Next.js, React, and more.',
 };
 
 export default function RootLayout({

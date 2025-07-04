@@ -3,44 +3,44 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowDown, Code, Database, ExternalLink, Github, Mail, Phone, Server, Wind } from 'lucide-react';
+import { ArrowDown, Code, Database, ExternalLink, Github, Linkedin, Mail, Phone, Server, Wrench } from 'lucide-react';
 import ContactForm from '@/components/contact-form';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce site with product catalogs, user authentication, and a Stripe-integrated checkout process. Built with a focus on performance and scalability.',
+    title: 'Scholarship Management System',
+    description: 'A customizable web platform to digitize and streamline scholarship processing. Built with Next.js, PostgreSQL, and Firebase to ensure scalability and efficiency.',
     image: 'https://placehold.co/600x400.png',
-    imageHint: 'online store',
-    tags: ['Next.js', 'React', 'Tailwind', 'Stripe'],
+    imageHint: 'scholarship portal',
+    tags: ['Next.js', 'PostgreSQL', 'Firebase', 'Vercel'],
     liveUrl: '#',
     githubUrl: '#',
   },
   {
-    title: 'Task Management App',
-    description: 'A collaborative task management tool that helps teams organize, track, and manage their work. Features include drag-and-drop boards, real-time updates, and notifications.',
+    title: 'Craxl-Ui',
+    description: 'An app that auto-generates UI code from design images to accelerate front-end development. Features a library of prebuilt, customizable components available on NPM.',
     image: 'https://placehold.co/600x400.png',
-    imageHint: 'task board',
-    tags: ['React', 'Firebase', 'Zustand'],
+    imageHint: 'UI generator code',
+    tags: ['React', 'NPM', 'UI/UX', 'Automation'],
     liveUrl: '#',
     githubUrl: '#',
   },
   {
-    title: 'AI Article Summarizer',
-    description: 'A web application that uses a fine-tuned language model to generate concise summaries of long articles and texts, increasing reading efficiency.',
+    title: 'MathsTutor QT',
+    description: 'A mathematics learning application for visually impaired children using Python and QT. Resolved ~70% of existing bugs, significantly improving stability and usability.',
     image: 'https://placehold.co/600x400.png',
-    imageHint: 'artificial intelligence',
-    tags: ['Python', 'FastAPI', 'Next.js', 'AI'],
-    liveUrl: '/summarizer',
+    imageHint: 'learning app accessibility',
+    tags: ['Python', 'QT', 'Accessibility', 'Desktop'],
+    liveUrl: '#',
     githubUrl: '#',
   },
 ];
 
 const skills = [
-  { icon: Code, name: 'Frontend', description: 'React, Next.js, Vue, Tailwind CSS' },
-  { icon: Server, name: 'Backend', description: 'Node.js, Python, Go, SQL' },
-  { icon: Database, name: 'Databases', description: 'PostgreSQL, MongoDB, Redis' },
-  { icon: Wind, name: 'DevOps', description: 'Docker, k8s, GCP, Vercel' },
+  { icon: Code, name: 'Languages', description: 'C, Java, Python, JS, TS, SQL' },
+  { icon: Server, name: 'Technologies', description: 'Next.js, ReactJS, Firebase, Vercel' },
+  { icon: Database, name: 'Databases', description: 'PostgreSQL, SQL, Firebase' },
+  { icon: Wrench, name: 'Tools', description: 'Git, GitHub, Docker, QT' },
 ];
 
 export default function Home() {
@@ -49,10 +49,10 @@ export default function Home() {
       <section id="hero" className="py-24 sm:py-32 md:py-40 bg-card/50">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-headline">
-            Jane Doe
+            ABHIRAM P S
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground sm:text-xl">
-            A passionate software engineer dedicated to building beautiful, functional, and user-centric web applications.
+            Software Engineering Intern turned Team Lead with a passion for building scalable, accessible, and user-centric applications.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg">
@@ -132,11 +132,11 @@ export default function Home() {
                 About Me
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                I'm a software engineer with over 5 years of experience in building high-quality web applications. My expertise lies in full-stack development, with a strong passion for creating intuitive user interfaces and robust backend systems. I thrive in collaborative environments and am always eager to learn new technologies.
+                As a Software Engineering Intern at Zendalona, I grew into a Team Lead role, contributing to diverse projects. I resolved critical bugs in a Zendesk-based query system, led the development of 'World Map MVP 2' with a scalable backend using PostgreSQL and Firebase, and improved 'MathsTutor QT,' an accessibility app for visually impaired children. I also designed and built a Scholarship Management System from the ground up using Next.js and later led a team of five to create an accessible chess application with Flutter.
               </p>
               <div className="mt-8">
                 <Button size="lg" asChild>
-                  <a href="/resume.pdf" download="JaneDoe-Resume.pdf">
+                  <a href="/resume.pdf" download="AbhiramPS-Resume.pdf">
                     Download Resume
                   </a>
                 </Button>
@@ -171,6 +171,16 @@ export default function Home() {
             <p className="mt-4 text-center text-lg text-muted-foreground">
               Have a question or a project in mind? I'd love to hear from you.
             </p>
+            <div className="mt-8 flex justify-center items-center flex-wrap gap-x-8 gap-y-4 text-muted-foreground">
+              <a href="mailto:psabhiram100@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Mail className="h-5 w-5" />
+                <span>psabhiram100@gmail.com</span>
+              </a>
+              <div className="flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                <span>+91 8590680648</span>
+              </div>
+            </div>
             <div className="mt-12">
               <ContactForm />
             </div>
