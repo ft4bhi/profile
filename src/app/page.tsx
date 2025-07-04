@@ -10,29 +10,29 @@ const projects = [
   {
     title: 'Scholarship Management System',
     description: 'A customizable web platform to digitize and streamline scholarship processing. Built with Next.js, PostgreSQL, and Firebase to ensure scalability and efficiency.',
-    image: 'https://placehold.co/600x400.png',
+    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
     imageHint: 'scholarship portal',
     tags: ['Next.js', 'PostgreSQL', 'Firebase', 'Vercel'],
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://darsana-scholarship.vercel.app/',
+    githubUrl: 'https://github.com/ft4bhi/darsanaScholarship',
   },
   {
     title: 'Craxl-Ui',
     description: 'An app that auto-generates UI code from design images to accelerate front-end development. Features a library of prebuilt, customizable components available on NPM.',
-    image: 'https://placehold.co/600x400.png',
+    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
     imageHint: 'UI generator code',
     tags: ['React', 'NPM', 'UI/UX', 'Automation'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/ft4bhi/mini-project2',
   },
   {
     title: 'MathsTutor QT',
     description: 'A mathematics learning application for visually impaired children using Python and QT. Resolved ~70% of existing bugs, significantly improving stability and usability.',
-    image: 'https://placehold.co/600x400.png',
+    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
     imageHint: 'learning app accessibility',
     tags: ['Python', 'QT', 'Accessibility', 'Desktop'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/ft4bhi/maths-tutor-v2',
   },
 ];
 
@@ -80,7 +80,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center md:justify-end">
                 <Image
-                  src="https://placehold.co/400x400.png"
+                  src="/Profile.jpeg"
                   alt="Portrait of Abhiram P S"
                   width={400}
                   height={400}
@@ -107,7 +107,7 @@ export default function Home() {
                 <CardHeader className="p-0">
                   <div className="overflow-hidden">
                     <Image
-                      src={project.image}
+                      src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
                       alt={project.title}
                       width={600}
                       height={400}
