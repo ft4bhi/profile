@@ -27,14 +27,14 @@ export default function ContactForm() {
   });
   
   const form = useForm<z.infer<typeof contactFormSchema>>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      message: '',
-      ...state.errors,
-    },
-  });
+  resolver: zodResolver(contactFormSchema),
+  defaultValues: {
+    name: '',
+    email: '',
+    message: '',
+  },
+});
+
 
   const formRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
