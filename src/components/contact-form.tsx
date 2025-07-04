@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -21,7 +20,7 @@ const contactFormSchema = z.object({
 });
 
 export default function ContactForm() {
-  const [state, formAction] = useFormState<ContactFormState, FormData>(submitContactForm, {
+  const [state, formAction] = useActionState<ContactFormState, FormData>(submitContactForm, {
     message: '',
     errors: {},
     success: false

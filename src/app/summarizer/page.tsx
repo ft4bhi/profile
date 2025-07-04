@@ -1,6 +1,6 @@
 'use client';
 
-import { useFormState } from 'react-dom';
+import { useActionState } from 'react';
 import { generateSummaryAction } from './actions';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -16,7 +16,7 @@ const initialState = {
 };
 
 export default function SummarizerPage() {
-  const [state, formAction] = useFormState(generateSummaryAction, initialState);
+  const [state, formAction] = useActionState(generateSummaryAction, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
