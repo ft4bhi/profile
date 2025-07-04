@@ -46,28 +46,54 @@ const skills = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section id="hero" className="py-24 sm:py-32 md:py-40 bg-card/50">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-headline">
-            ABHIRAM P S
-          </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground sm:text-xl">
-            Software Engineering Intern turned Team Lead with a passion for building scalable, accessible, and user-centric applications.
-          </p>
-          <div className="mt-8 flex justify-center gap-4">
-            <Button asChild size="lg">
-              <Link href="#contact">Get in Touch</Link>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="#projects">
-                My Work <ArrowDown className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+      <section id="hero" className="py-20 sm:py-28 md:py-32">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 items-center">
+            <div className="space-y-6 text-center md:text-left">
+              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl font-headline">
+                ABHIRAM P S
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                Software Engineering Intern turned Team Lead with a passion for building scalable, accessible, and user-centric applications.
+              </p>
+              <div className="flex items-center justify-center md:justify-start gap-4">
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="h-7 w-7" />
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="h-7 w-7" />
+                </a>
+                <a href="mailto:psabhiram100@gmail.com" aria-label="Email" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Mail className="h-7 w-7" />
+                </a>
+              </div>
+              <div className="flex justify-center md:justify-start gap-4 pt-4">
+                <Button asChild size="lg">
+                  <Link href="#contact">Get in Touch</Link>
+                </Button>
+                <Button asChild size="lg" variant="secondary">
+                  <Link href="#projects">
+                    My Work <ArrowDown className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center md:justify-end">
+                <Image
+                  src="https://placehold.co/400x400.png"
+                  alt="Portrait of Abhiram P S"
+                  width={400}
+                  height={400}
+                  className="rounded-full aspect-square object-cover shadow-lg border-4 border-card"
+                  data-ai-hint="profile picture man"
+                  priority
+                />
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" className="py-20 sm:py-24">
+      <section id="projects" className="py-20 sm:py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center tracking-tight sm:text-4xl font-headline">
             Project Showcase
