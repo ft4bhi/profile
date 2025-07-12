@@ -1,16 +1,29 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowDown, Code, Database, ExternalLink, Github, Linkedin, Mail, Phone, Server, Wrench } from 'lucide-react';
-// import ContactForm from '@/components/contact-form';
+import {
+  ArrowDown,
+  Code,
+  Database,
+  ExternalLink,
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  Server,
+  Wrench,
+} from 'lucide-react';
 
 const projects = [
   {
     title: 'Scholarship Management System',
-    description: 'A customizable web platform to digitize and streamline scholarship processing. Built with Next.js, PostgreSQL, and Firebase to ensure scalability and efficiency.',
-    image: "/project/scholarship.png",
+    description:
+      'A customizable web platform to digitize and streamline scholarship processing. Built with Next.js, PostgreSQL, and Firebase to ensure scalability and efficiency.',
+    image: '/project/scholarship.png',
     imageHint: 'scholarship portal',
     tags: ['Next.js', 'PostgreSQL', 'Firebase', 'Vercel'],
     liveUrl: 'https://darsana-scholarship.vercel.app/',
@@ -18,20 +31,20 @@ const projects = [
   },
   {
     title: 'Craxl-Ui',
-    description: 'An app that auto-generates UI code from design images to accelerate front-end development. Features a library of prebuilt, customizable components available on NPM.',
-    image: "/project/craxl.png",
+    description:
+      'An app that auto-generates UI code from design images to accelerate front-end development. Features a library of prebuilt, customizable components available on NPM.',
+    image: '/project/craxl.png',
     imageHint: 'UI generator code',
     tags: ['React', 'NPM', 'UI/UX', 'Automation'],
-    
     githubUrl: 'https://github.com/ft4bhi/mini-project2',
   },
   {
     title: 'MathsTutor QT',
-    description: 'A mathematics learning application for visually impaired children using Python and QT. Resolved ~70% of existing bugs, significantly improving stability and usability.',
-    image: "/project/mathtutor.png",
+    description:
+      'A mathematics learning application for visually impaired children using Python and QT. Resolved ~70% of existing bugs, significantly improving stability and usability.',
+    image: '/project/mathtutor.png',
     imageHint: 'learning app accessibility',
     tags: ['Python', 'QT', 'Accessibility', 'Desktop'],
-    
     githubUrl: 'https://github.com/ft4bhi/maths-tutor-v2',
   },
 ];
@@ -46,17 +59,18 @@ const skills = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section id="hero" className="py-20 sm:py-28 md:py-32">
+      {/* Hero Section */}
+      <section id="hero" className="py-16 sm:py-20 md:py-28">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="space-y-6 text-center md:text-left">
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl font-headline">
                 ABHIRAM P S
               </h1>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-lg sm:text-xl text-muted-foreground">
                 Software Engineering Intern turned Team Lead with a passion for building scalable, accessible, and user-centric applications.
               </p>
-              <div className="flex items-center justify-center md:justify-start gap-4">
+              <div className="flex justify-center md:justify-start gap-4">
                 <a href="https://github.com/ft4bhi" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github className="h-7 w-7" />
                 </a>
@@ -67,7 +81,7 @@ export default function Home() {
                   <Mail className="h-7 w-7" />
                 </a>
               </div>
-              <div className="flex justify-center md:justify-start gap-4 pt-4">
+              <div className="flex justify-center md:justify-start gap-4 pt-4 flex-wrap">
                 <Button asChild size="lg">
                   <Link href="#contact">Get in Touch</Link>
                 </Button>
@@ -79,20 +93,21 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center md:justify-end">
-                <Image
-                  src="/Profile.jpeg"
-                  alt="Portrait of Abhiram P S"
-                  width={400}
-                  height={400}
-                  className="rounded-full aspect-square object-cover shadow-lg border-4 border-card"
-                  data-ai-hint="profile picture man"
-                  priority
-                />
+              <Image
+                src="/Profile.jpeg"
+                alt="Portrait of Abhiram P S"
+                width={300}
+                height={300}
+                className="rounded-full object-cover shadow-lg border-4 border-card w-40 h-40 sm:w-52 sm:h-52 md:w-72 md:h-72"
+                data-ai-hint="profile picture man"
+                priority
+              />
             </div>
           </div>
         </div>
       </section>
 
+      {/* Projects Section */}
       <section id="projects" className="py-20 sm:py-24 bg-card/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center tracking-tight sm:text-4xl font-headline">
@@ -123,32 +138,36 @@ export default function Home() {
                 <CardFooter className="flex flex-col items-start">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">{tag}</Badge>
+                      <Badge key={tag} variant="secondary">
+                        {tag}
+                      </Badge>
                     ))}
                   </div>
                   <div className="flex w-full justify-between items-center">
                     <div className="flex gap-2">
-                       <Button asChild variant="ghost" size="icon">
-                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} on Github`}>
-                            <Github className="h-5 w-5"/>
+                      <Button asChild variant="ghost" size="icon">
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${project.title} on Github`}
+                        >
+                          <Github className="h-5 w-5" />
+                        </a>
+                      </Button>
+                      {project.liveUrl && (
+                        <Button asChild variant="ghost" size="icon">
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Live demo of ${project.title}`}
+                          >
+                            <ExternalLink className="h-5 w-5" />
                           </a>
-                       </Button>
-                       {project.liveUrl && (
-  <Button asChild variant="ghost" size="icon">
-    <a
-      href={project.liveUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Live demo of ${project.title}`}
-    >
-      <ExternalLink className="h-5 w-5" />
-    </a>
-  </Button>
-)}
+                        </Button>
+                      )}
                     </div>
-                    {/* <Button asChild variant="link">
-                      <a href={project.liveUrl}>View Details</a>
-                    </Button> */}
                   </div>
                 </CardFooter>
               </Card>
@@ -157,13 +176,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Section */}
       <section id="about" className="py-20 sm:py-24 bg-card/50">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">
-                About Me
-              </h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">About Me</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 As a Software Engineering Intern at Zendalona, I grew into a Team Lead role, contributing to diverse projects. I resolved critical bugs in a Zendesk-based query system, led the development of 'World Map MVP 2' with a scalable backend using PostgreSQL and Firebase, and improved 'MathsTutor QT,' an accessibility app for visually impaired children. I also designed and built a Scholarship Management System from the ground up using Next.js and later led a team of five to create an accessible chess application with Flutter.
               </p>
@@ -195,6 +213,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact Section */}
       <section id="contact" className="py-20 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
@@ -214,9 +233,6 @@ export default function Home() {
                 <span>+91 8590680648</span>
               </div>
             </div>
-            {/* <div className="mt-12">
-              {/* <ContactForm /> */}
-            {/* </div> */} 
           </div>
         </div>
       </section>
