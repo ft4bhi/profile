@@ -16,12 +16,12 @@ export function Footer() {
           </div>
           <div className="flex items-center space-x-2">
             <Button variant="ghost" size="icon" asChild>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/ft4bhi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/abhiram-ps-9b744924b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>

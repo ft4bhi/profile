@@ -4,13 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowDown, Code, Database, ExternalLink, Github, Linkedin, Mail, Phone, Server, Wrench } from 'lucide-react';
-import ContactForm from '@/components/contact-form';
+// import ContactForm from '@/components/contact-form';
 
 const projects = [
   {
     title: 'Scholarship Management System',
     description: 'A customizable web platform to digitize and streamline scholarship processing. Built with Next.js, PostgreSQL, and Firebase to ensure scalability and efficiency.',
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+    image: "/project/scholarship.png",
     imageHint: 'scholarship portal',
     tags: ['Next.js', 'PostgreSQL', 'Firebase', 'Vercel'],
     liveUrl: 'https://darsana-scholarship.vercel.app/',
@@ -19,19 +19,19 @@ const projects = [
   {
     title: 'Craxl-Ui',
     description: 'An app that auto-generates UI code from design images to accelerate front-end development. Features a library of prebuilt, customizable components available on NPM.',
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+    image: "/project/craxl.png",
     imageHint: 'UI generator code',
     tags: ['React', 'NPM', 'UI/UX', 'Automation'],
-    liveUrl: '#',
+    
     githubUrl: 'https://github.com/ft4bhi/mini-project2',
   },
   {
     title: 'MathsTutor QT',
     description: 'A mathematics learning application for visually impaired children using Python and QT. Resolved ~70% of existing bugs, significantly improving stability and usability.',
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+    image: "/project/mathtutor.png",
     imageHint: 'learning app accessibility',
     tags: ['Python', 'QT', 'Accessibility', 'Desktop'],
-    liveUrl: '#',
+    
     githubUrl: 'https://github.com/ft4bhi/maths-tutor-v2',
   },
 ];
@@ -57,10 +57,10 @@ export default function Home() {
                 Software Engineering Intern turned Team Lead with a passion for building scalable, accessible, and user-centric applications.
               </p>
               <div className="flex items-center justify-center md:justify-start gap-4">
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/ft4bhi" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github className="h-7 w-7" />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/in/abhiram-ps-9b744924b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin className="h-7 w-7" />
                 </a>
                 <a href="mailto:psabhiram100@gmail.com" aria-label="Email" className="text-muted-foreground hover:text-primary transition-colors">
@@ -107,7 +107,7 @@ export default function Home() {
                 <CardHeader className="p-0">
                   <div className="overflow-hidden">
                     <Image
-                      src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
+                      src={project.image}
                       alt={project.title}
                       width={600}
                       height={400}
@@ -133,15 +133,22 @@ export default function Home() {
                             <Github className="h-5 w-5"/>
                           </a>
                        </Button>
-                       <Button asChild variant="ghost" size="icon">
-                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Live demo of ${project.title}`}>
-                           <ExternalLink className="h-5 w-5"/>
-                         </a>
-                       </Button>
+                       {project.liveUrl && (
+  <Button asChild variant="ghost" size="icon">
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Live demo of ${project.title}`}
+    >
+      <ExternalLink className="h-5 w-5" />
+    </a>
+  </Button>
+)}
                     </div>
-                    <Button asChild variant="link">
+                    {/* <Button asChild variant="link">
                       <a href={project.liveUrl}>View Details</a>
-                    </Button>
+                    </Button> */}
                   </div>
                 </CardFooter>
               </Card>
@@ -207,9 +214,9 @@ export default function Home() {
                 <span>+91 8590680648</span>
               </div>
             </div>
-            <div className="mt-12">
-              <ContactForm />
-            </div>
+            {/* <div className="mt-12">
+              {/* <ContactForm /> */}
+            {/* </div> */} 
           </div>
         </div>
       </section>
