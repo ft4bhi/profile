@@ -47,6 +47,25 @@ const projects = [
     tags: ['Python', 'QT', 'Accessibility', 'Desktop'],
     githubUrl: 'https://github.com/ft4bhi/maths-tutor-v2',
   },
+  {
+    title: 'littleEatery-',
+    description:
+      'A restaurant website which is used by a hotal.A user-friendly interface , menus Built with Next.js.',
+    image: '/project/hotal.png',
+    imageHint: 'restaurant website',
+    tags: ['Next.js', 'React', 'UI/UX'],
+    liveUrl: 'https://ft4bhi.github.io/littleEatery-/',
+    githubUrl: 'https://github.com/ft4bhi/littleEatery-',
+  },
+   {
+    title: 'World-map-explorer',
+    description:
+      'An interactive web application for visuly imapaired user that allows users to explore and visualize global data on a world map. Built with Next.js, PostgreSQL, and Firebase for a robust backend.',
+    image: '/project/wme2.png',
+    imageHint: 'world map explorer',
+    tags: ['Next.js', 'PostgreSQL', 'Firebase', 'Vercel'],
+    githubUrl: 'https://github.com/ft4bhi/world-map-explore-nextjs',
+  },
 ];
 
 const skills = [
